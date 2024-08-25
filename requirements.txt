@@ -9,3 +9,4 @@ ripser
 persim
 scikit-learn
 horovod
+cupy

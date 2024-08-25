@@ -55,7 +55,7 @@ class AdvancedVisualizer:
         fig.show()
 
     def plot_multidimensional_state(self):
-        states = self.uo.observation_history[-100:]  # Last 100 states
+        states = self.uo.observation_history[-100:]
         q_values = [state['q'] for state in states]
         tau_values = [state['tau'] for state in states]
         entropy_values = [self.uo.compute_entropy() for _ in states]
@@ -74,10 +74,3 @@ class AdvancedVisualizer:
                                      yaxis_title='tau',
                                      zaxis_title='Entropy'))
         fig.show()
-
-    def create_interactive_dashboard(self):
-        # This is a placeholder for a more complex interactive dashboard
-        # In a real implementation, you might use a web framework like Dash
-        print("Interactive dashboard would be implemented here")
-        print("It would include real-time updates of the observer's state,")
-        print("visualizations of the wave function, and controls for interaction.")
