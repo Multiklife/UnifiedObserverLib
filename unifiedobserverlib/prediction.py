@@ -51,8 +51,8 @@ def parallel_predict(args):
 
     return future_prices
 
-async def refined_predict_btc(timeframe='1h', future_steps=24):
-    btc_data, social_data = await RealTimeDataFetcher.fetch_all_data(timeframe)
+def refined_predict_btc(timeframe='1h', future_steps=24):
+    btc_data, social_data = RealTimeDataFetcher.fetch_all_data(timeframe)
     
     with Pool(cpu_count()) as pool:
         results = pool.map(parallel_predict, [(timeframe, future_steps, btc_data, social_data)] * 10)

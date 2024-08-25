@@ -1,0 +1,11 @@
+numpy
+scipy
+tensorflow
+tensorflow-quantum
+cirq
+matplotlib
+plotly
+ripser
+persim
+scikit-learn
+horovod

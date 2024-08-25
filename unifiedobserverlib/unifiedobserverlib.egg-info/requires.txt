@@ -1,0 +1,6 @@
+numpy
+matplotlib
+aiohttp
+yfinance
+scikit-learn
+pandas
